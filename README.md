@@ -1,8 +1,10 @@
 # TalentScout — Intelligent Hiring Assistant 🤖
 
-An AI-powered chatbot for conducting initial candidate interviews, automatically extracting technical profiles, generating relevant interview questions, and storing data in compliance with GDPR.
+> **🚀 Live Demo:** [https://talentscout-hiring-assistant-tqwz79ka5aqcl7yrv9ebyg.streamlit.app](https://talentscout-hiring-assistant-tqwz79ka5aqcl7yrv9ebyg.streamlit.app)
 
-Built with **Python**, **Streamlit**, and **Groq's ultra-fast cloud LLM inference** (Llama 3.1 8B).
+TalentScout is an **AI-powered hiring assistant chatbot** that automates the initial screening phase of technical recruitment. It conducts natural, conversational interviews — collecting candidate details, detecting tech stacks, and generating tailored technical questions — all in real time. No forms, no manual effort.
+
+Built with **Python**, **Streamlit**, and **Groq's ultra-fast cloud LLM inference** (Llama 3.1 8B — free tier).
 
 ---
 
