@@ -7,10 +7,25 @@ from typing import Dict, List
 # Ensure .env is loaded even if config is imported before streamlit_app calls load_dotenv()
 load_dotenv()
 
+def _get_secret(key: str, default: str = "") -> str:
+    """Read a secret from environment variables or Streamlit Cloud secrets.
+    
+    Falls back to st.secrets when running on Streamlit Cloud,
+    where secrets are not injected as OS environment variables.
+    """
+    value = os.getenv(key, "")
+    if not value:
+        try:
+            import streamlit as st
+            value = st.secrets.get(key, default)
+        except Exception:
+            value = default
+    return value
+
 # LLM Configuration — Groq Cloud Inference (free tier)
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+GROQ_API_KEY = _get_secret("GROQ_API_KEY")
 # Available models: llama-3.1-8b-instant, llama-3.3-70b-versatile, mixtral-8x7b-32768
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
+GROQ_MODEL = _get_secret("GROQ_MODEL", "llama-3.1-8b-instant")
 TEMPERATURE = 0.7
 MAX_TOKENS = 512
 
