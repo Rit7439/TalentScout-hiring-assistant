@@ -59,7 +59,7 @@ TalentScout HIRING/
 
 2. **Configure API Key**
    - Create `.env` file based on `.env.example`
-   - Add your OpenAI API key from platform.openai.com
+   - Add your Groq API key from console.groq.com
 
 3. **Run Application**
    ```bash
@@ -142,7 +142,7 @@ TalentScout HIRING/
 ## Technology Stack
 
 - **Framework**: Streamlit 1.28.1
-- **AI Model**: OpenAI GPT-4
+- **AI Model**: Groq (Llama 3 — `llama3-70b-8192`)
 - **Language**: Python 3.8+
 - **Data Storage**: JSON
 - **Environment**: python-dotenv
